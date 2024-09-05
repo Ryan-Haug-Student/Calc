@@ -15,7 +15,7 @@ const div1 = document.querySelector('#Divinput1')
 const div2 = document.querySelector('#Divinput2')
 
 abutton.addEventListener('click', () =>
-    {alert(add1.value + add2.value)})
+    {alert(add1.value*1 + add2.value*1)})
 
 sbutton.addEventListener('click', () =>
     {alert(sub1.value - sub2.value)})
