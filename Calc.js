@@ -16,6 +16,9 @@ const div2 = document.querySelector('#Divinput2')
 
 abutton.addEventListener('click', () =>
     {alert(add1.value*1 + add2.value*1)})
+//This was so dumb, spent roughly 3hrs trying to figure out how to convert the string to number bc js wants to concatination which means add strings over just add numbers which is dumb
+//items tried were parsefloat(), number(), ValueNumeric, and several other random "solutions" from random websites, mostly reddit and stack overflow
+//im also like 90% sure i tried *1 before and it didnt work so this is dumb
 
 sbutton.addEventListener('click', () =>
     {alert(sub1.value - sub2.value)})
