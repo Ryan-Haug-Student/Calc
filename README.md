@@ -1,0 +1,1 @@
+REMINDER - codespace use for personal projects ex "calc" which is used for school, is limited to 120 hrs a month, so ask mr martinez if he can create a repo for personal projects, which has code spaces paid for by the ctc
