@@ -1,30 +1,31 @@
-const abutton = document.querySelector('#AddSolve')
-const add1 = document.querySelector('#Addinput1')
-const add2 = document.querySelector('#Addinput2')
+const Inp1 = document.querySelector('#gen1')
+const Inp2 = document.querySelector('#gen2')
+let operator = document.querySelector('#op')
+let submit = document.querySelector('#solve')
 
-const sbutton = document.querySelector('#SubSolve')
-const sub1 = document.querySelector('#Subinput1')
-const sub2 = document.querySelector('#Subinput2')
+const sol = document.querySelector('#answer')
+let a =  0
 
-const mbutton = document.querySelector('#MulSolve')
-const mul1 = document.querySelector('#Mulinput1')
-const mul2 = document.querySelector('#Mulinput2')
+function domath(){
+    if(op.value == "+") {
+        a = (gen1.value*1 + gen2.value*1)
+    }
 
-const dbutton = document.querySelector('#DivSolve')
-const div1 = document.querySelector('#Divinput1')
-const div2 = document.querySelector('#Divinput2')
+    if(op.value == "-") {
+        a = (gen1.value - gen2.value)
+    }
 
-abutton.addEventListener('click', () =>
-    {alert(add1.value*1 + add2.value*1)})
-//This was so dumb, spent roughly 3hrs trying to figure out how to convert the string to number bc js wants to concatination which means add strings over just add numbers which is dumb
-//items tried were parsefloat(), number(), ValueNumeric, and several other random "solutions" from random websites, mostly reddit and stack overflow
-//im also like 90% sure i tried *1 before and it didnt work so this is dumb
+    if(op.value == "*") {
+        a = (gen1.value * gen2.value)
+    }
 
-sbutton.addEventListener('click', () =>
-    {alert(sub1.value - sub2.value)})
+    if(op.value == "/") {
+        a =(gen1.value / gen2.value)
+    }
 
-mbutton.addEventListener('click', () =>
-    {alert(mul1.value * mul2.value)})
+    sol.textContent = "Answer = " + a
+}
 
-dbutton.addEventListener('click', () =>
-    {alert(div1.value / div2.value)})
+submit.addEventListener('click', (domath))
+
+// gen2.addEventListener('keydown', (domath))

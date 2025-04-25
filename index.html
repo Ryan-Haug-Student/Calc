@@ -1,42 +1,73 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
-    <title>Simple Calc by RyanH</title>
-    <meta charset="UTF-8">
-    <link href="./Style.css" rel="stylesheet">
+
+    <style>
+        body{
+            background-color: grey;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            height: 100vw;
+        }
+
+        div{
+            background-color: darkgrey;
+            width: 600px;
+            height: 50px;
+            margin: 10px 0 0 0;
+            display: flex;
+            align-items: center;
+            padding: 5px;
+            border-radius: 10px;
+            border-style: solid;
+            justify-content: center;
+        }
+
+        input{
+            margin: 0 25px 0 25px;
+            border-radius: 10px;
+            border-style: solid;
+            scale: 1.2;
+        }
+        
+        button, select{
+            border-radius: 10px;
+            border-style: solid;
+        }
+
+        p{
+            font-size: 32px;
+        }
+
+    </style>
+
 </head>
 
+
 <body>
-    <p>Addition</p>
-        <input id="Addinput1" type="number"
-            placeholder="0">
-        <input id="Addinput2" type="number"
-            placeholder="0">
-    <button id="AddSolve">Solve</button>
+    <div>
+        <h1>Super Fancy Calculator</h1>
+    </div>
 
-    <p>Subtraction</p>
-        <input id="Subinput1" type="number"
-            placeholder="0">
-        <input id="Subinput2" type="number"
-            placeholder="0">
-    <button id="SubSolve">Solve</button>
+    <div>
+        <input id="gen1" type="number" placeholder="0">
+        <select id="op">
+            <option value="+">Add</option>
+            <option value="-">Sub</option>
+            <option value="*">Mul</option>
+            <option value="/">Div</option>
+        </select>
+        <input id="gen2" type="number" placeholder="0">
+        <button id="solve">Solve</button>
+    </div>
 
-    <p>Multiply</p>
-        <input id="Mulinput1" type="number"
-            placeholder="0">
-        <input id="Mulinput2" type="number"
-            placeholder="0">
-    <button id="MulSolve">Solve</button>
-
-    <p>Divide</p>
-        <input id="Divinput1" type="number"
-            placeholder="0">
-        <input id="Divinput2" type="number"
-            placeholder="0">
-    <button id="DivSolve">Solve</button>
-
-    <script src="Calc.js"></script>
+    <div>
+        <p id="answer">Answer =</p>
+    </div>
 </body>
+
+<script src="Calc.js"></script>
 
 </html>
